@@ -11,8 +11,8 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            font-family: 'Arial', sans-serif;
         }
         #particles-js {
             position: absolute;
@@ -31,16 +31,47 @@
             background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             margin: 20px auto;
-            max-width: 800px;
+            max-width: 900px;
         }
         .navbar {
             margin-bottom: 20px;
         }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .header h1 {
+            margin: 10px 0;
+            font-size: 2.5em;
+            color: #333;
+        }
         section {
             margin-bottom: 40px;
         }
-        h1, h2, h3 {
+        h2 {
             color: #333;
+            font-size: 1.75em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .skills, .interests {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li, .interests li {
+            display: inline-block;
+            margin: 0 10px 10px 0;
+            padding: 10px 15px;
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -59,6 +90,11 @@
             </div>
         </nav>
 
+        <div class="header">
+            <img src="path/to/your/photo.jpg" alt="Your Photo">
+            <h1>Your Name</h1>
+        </div>
+
         <section id="education">
             <h2>Education</h2>
             <p>Details about your education go here...</p>
@@ -71,7 +107,13 @@
 
         <section id="skills">
             <h2>Skills</h2>
-            <p>Details about your skills go here...</p>
+            <ul class="skills">
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+                <li>Skill 4</li>
+                <li>Skill 5</li>
+            </ul>
         </section>
 
         <section id="projects">
