@@ -35,14 +35,8 @@
             max-width: 900px;
         }
         .navbar {
-            background-color: rgba(182, 178, 178, 0.9); /* Match the .content background color */
+            background-color: rgba(182, 178, 178, 0.9);
             margin-bottom: 20px;
-        }
-        .navbar .navbar-brand, .navbar .nav-link {
-            color: #333;
-        }
-        .navbar .nav-link:hover {
-            color: #555;
         }
         .header {
             text-align: center;
@@ -67,6 +61,12 @@
             display: inline-block;
             color: #333;
             font-size: 2em;
+            transition: all 0.3s ease;
+        }
+        .header .social-icons a:hover {
+            color: #007bff; /* Change to your preferred color */
+            transform: translateY(-5px);
+            text-shadow: 0 0 10px #007bff; /* Optional: adds a glowing effect */
         }
         section {
             margin-bottom: 40px;
@@ -78,11 +78,11 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        .skills, .interests, .frameworks {
+        .skills, .interests, .frameworks, .languages {
             list-style: none;
             padding: 0;
         }
-        .skills li, .interests li, .frameworks li {
+        .skills li, .interests li, .frameworks li, .languages li {
             display: inline-block;
             margin: 0 10px 10px 0;
             padding: 10px 15px;
@@ -90,19 +90,17 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        .frameworks li a {
-            color: #333;
-            text-decoration: none;
-        }
-        .frameworks li a:hover {
-            color: #000;
-        }
         .frameworks li {
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .frameworks li:hover {
+            background: #ddd;
+            color: #000;
             transform: translateY(-5px);
-            background-color: #e0e0e0;
+        }
+        .frameworks a {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
 </head>
@@ -117,6 +115,7 @@
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#frameworks">Security Frameworks</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#languages">Languages Spoken</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                 </ul>
             </div>
@@ -185,12 +184,15 @@
         <section id="frameworks">
             <h2>Security Frameworks Experience</h2>
             <ul class="frameworks">
-                <li><a href="https://www.iso.org/iso-27001-information-security.html" target="_blank">ISO/IEC 27001</a></li>
-                <li><a href="https://www.socreports.org/" target="_blank">SOC 1/2/3</a></li>
+                <li><a href="https://www.socreports.com/" target="_blank">SOC Reports</a></li>
                 <li><a href="https://www.pcisecuritystandards.org/" target="_blank">PCI DSS</a></li>
-                <li><a href="https://www.cisa.gov/publications-library/cybersecurity-framework" target="_blank">NIST CSF</a></li>
-                <li><a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final" target="_blank">NIST SP 800-53</a></li>
-                <li><a href="https://hitrustalliance.net/what-is-hitrust/" target="_blank">HITRUST</a></li>
+                <li><a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank">ISO/IEC 27001</a></li>
+                <li><a href="https://www.irap.gov.au/" target="_blank">IRAP</a></li>
+                <li><a href="https://www.ensi.es/" target="_blank">ENS</a></li>
+                <li><a href="https://www.cyberessentials.ncsc.gov.uk/" target="_blank">Cyber Essentials</a></li>
+                <li><a href="https://www.bsi.bund.de/EN/Topics/IT-Security/BSI-C5/BSI-C5_node.html" target="_blank">BSI C5</a></li>
+                <li><a href="https://hitrustalliance.net/" target="_blank">HITRUST</a></li>
+                <li><a href="https://www.fedramp.gov/" target="_blank">FedRAMP</a></li>
             </ul>
         </section>
 
@@ -202,21 +204,37 @@
                 <li>SQL</li>
                 <li>HTML/CSS</li>
                 <li>Tableau</li>
-                <li>Security Frameworks</li>
+                <li>UX Design</li>
+                <li>R</li>
+                <li>Git/GitHub</li>
+            </ul>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <ul class="interests">
+                <li>Cybersecurity</li>
+                <li>Data Science</li>
+                <li>Artificial Intelligence</li>
+                <li>Programming</li>
+            </ul>
+        </section>
+
+        <section id="languages">
+            <h2>Languages Spoken</h2>
+            <ul class="languages">
+                <li>English</li>
+                <li>Portuguese</li>
+                <li>Spanish</li>
             </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <ul class="projects">
-                <li>Project 1: Description</li>
-                <li>Project 2: Description</li>
-                <li>Project 3: Description</li>
-            </ul>
+            <p>Details about your projects will go here.</p>
         </section>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         particlesJS('particles-js', {
@@ -292,6 +310,31 @@
                         "mode": "push"
                     },
                     "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 0.8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
                 }
             },
             "retina_detect": true
